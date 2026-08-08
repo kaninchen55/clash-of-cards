@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clash of Cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="toggleSidebar">☰</button>
+
+<div id="sidebar">
+    <div id="loginBox">
+        <h2 id="clanDisplay">Clan: None</h2>
+
+        <input id="clanInput" placeholder="Clan name">
+        <button id="clanButton">Enter</button>
+        <button id="changeClanButton" style="display:none">Change Clan</button>
+
+        <button id="tradingButton" style="display:none">Trading</button>
+
+        <h2>Account</h2>
+
+        <input id="accountInput" placeholder="Account name">
+        <button id="accountButton">Enter</button>
+
+        <hr>
+
+        <h3>Accounts</h3>
+        <div id="accountList"></div>
+
+        <h3>Clan Members</h3>
+        <div id="memberList"></div>
+    </div>
+</div>
+
+<script>
+// Apply persisted sidebar state immediately to avoid flicker
+;(function(){
+    try {
+        const saved = localStorage.getItem('clashSidebarCollapsed');
+        if (saved === '1') {
+            document.body.classList.add('sidebar-hidden');
+            const sb = document.getElementById('sidebar');
+            if (sb) sb.classList.add('collapsed');
+        } else if (saved === '0') {
+            document.body.classList.remove('sidebar-hidden');
+            const sb = document.getElementById('sidebar');
+            if (sb) sb.classList.remove('collapsed');
+        }
+    } catch (e) {
+        // ignore
+    }
+})();
+</script>
+
+<div id="players">Enter account</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+{
+  "Barbarian": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/87/Avatar_Barbarian.png/revision/latest/scale-to-width-down/120?cb=20170525070200"
+  },
+  "Archer": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/68/Avatar_Archer.png/revision/latest/scale-to-width-down/120?cb=20200913014217"
+  },
+  "Giant": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/7/7d/Avatar_Giant.png/revision/latest/scale-to-width-down/120?cb=20170525070402"
+  },
+  "Goblin": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/68/Avatar_Goblin.png/revision/latest/scale-to-width-down/120?cb=20200913195137"
+  },
+  "Wall Breaker": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/36/Avatar_Wall_Breaker.png/revision/latest/scale-to-width-down/120?cb=20200913015114"
+  },
+  "Balloon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/80/Avatar_Balloon.png/revision/latest/scale-to-width-down/120?cb=20170525070200"
+  },
+  "Wizard": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/97/Avatar_Wizard.png/revision/latest/scale-to-width-down/120?cb=20200913195243"
+  },
+  "Healer": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/9c/Avatar_Healer.png/revision/latest/scale-to-width-down/120?cb=20170525070403"
+  },
+  "Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/9c/Avatar_Dragon.png/revision/latest/scale-to-width-down/120?cb=20200913195335"
+  },
+  "P.E.K.K.A": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/1/1a/Avatar_P.E.K.K.A.png/revision/latest/scale-to-width-down/120?cb=20170525070542"
+  },
+  "Baby Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/7/7a/Avatar_Baby_Dragon.png/revision/latest/scale-to-width-down/120?cb=20200913014509"
+  },
+  "Miner": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/7/7a/Avatar_Miner.png/revision/latest/scale-to-width-down/120?cb=20170525070405"
+  },
+  "Electro Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/97/Avatar_Electro_Dragon.png/revision/latest/scale-to-width-down/120?cb=20200910094107"
+  },
+  "Yeti": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/b/be/Avatar_Yeti.png/revision/latest/scale-to-width-down/120?cb=20200913074419"
+  },
+  "Dragon Rider": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/5/50/Avatar_Dragon_Rider.png/revision/latest/scale-to-width-down/120?cb=20210618061045"
+  },
+  "Electro Titan": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/67/Avatar_Electro_Titan.png/revision/latest/scale-to-width-down/120?cb=20221010075230"
+  },
+  "Root Rider": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/0/0b/Avatar_Root_Rider.png/revision/latest/scale-to-width-down/120?cb=20231213214829"
+  },
+  "Thrower": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/d/da/Avatar_Thrower.png/revision/latest/scale-to-width-down/120?cb=20241123132731"
+  },
+  "Meteor Golem": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/0/01/Avatar_Meteor_Golem.png/revision/latest/scale-to-width-down/120?cb=20251014075046"
+  },
+  "Minion": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/3b/Avatar_Minion.png/revision/latest/scale-to-width-down/120?cb=20170525070405"
+  },
+  "Hog Rider": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/e/e9/Avatar_Hog_Rider.png/revision/latest/scale-to-width-down/120?cb=20200913195505"
+  },
+  "Valkyrie": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/31/Avatar_Valkyrie.png/revision/latest/scale-to-width-down/120?cb=20170525070543"
+  },
+  "Golem": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/4/44/Avatar_Golem.png/revision/latest/scale-to-width-down/120?cb=20170525070403"
+  },
+  "Witch": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/90/Avatar_Witch.png/revision/latest/scale-to-width-down/120?cb=20170525070544"
+  },
+  "Lava Hound": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/1/1b/Avatar_Lava_Hound.png/revision/latest/scale-to-width-down/120?cb=20200913195616"
+  },
+  "Bowler": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/2/24/Avatar_Bowler.png/revision/latest/scale-to-width-down/120?cb=20170525070202"
+  },
+  "Ice Golem": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/7/79/Avatar_Ice_Golem.png/revision/latest/scale-to-width-down/120?cb=20200913014329"
+  },
+  "Headhunter": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/80/Avatar_Headhunter.png/revision/latest/scale-to-width-down/120?cb=20200913074511"
+  },
+  "Apprentice Warden": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/8b/Avatar_Apprentice_Warden.png/revision/latest/scale-to-width-down/120?cb=20230613002759"
+  },
+  "Druid": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/4/43/Avatar_Druid.png/revision/latest/scale-to-width-down/120?cb=20241003084537"
+  },
+  "Furnace": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Avatar_Furnace.png/revision/latest/scale-to-width-down/120?cb=20251117221817"
+  },
+  "Ruin Witch": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/9e/Avatar_Ruin_Witch.png/revision/latest/scale-to-width-down/120?cb=20260615222037"
+  },
+  "Raged Barbarian": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/1/12/Avatar_Raged_Barbarian.png/revision/latest/scale-to-width-down/120?cb=20170525070542"
+  },
+  "Sneaky Archer": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/8c/Avatar_Sneaky_Archer.png/revision/latest/scale-to-width-down/120?cb=20170525070543"
+  },
+  "Boxer Giant": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/80/Avatar_Boxer_Giant.png/revision/latest/scale-to-width-down/120?cb=20170525070202"
+  },
+  "Beta Minion": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/d/d2/Avatar_Beta_Minion.png/revision/latest/scale-to-width-down/120?cb=20200913200500"
+  },
+  "Bomber": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/f/fc/Avatar_Bomber.png/revision/latest/scale-to-width-down/120?cb=20170525070201"
+  },
+  "Builder Baby Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/7/7a/Avatar_Baby_Dragon.png/revision/latest/scale-to-width-down/120?cb=20200913014509"
+  },
+  "Cannon Cart": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/2/21/Avatar_Cannon_Cart.png/revision/latest/scale-to-width-down/120?cb=20230519102022"
+  },
+  "Night Witch": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/f/f8/Avatar_Night_Witch.png/revision/latest/scale-to-width-down/120?cb=20170525070541"
+  },
+  "Drop Ship": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/8b/Avatar_Drop_Ship.png/revision/latest/scale-to-width-down/120?cb=20170525070401"
+  },
+  "Power P.E.K.K.A": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/3b/Avatar_Power_P.E.K.K.A.png/revision/latest/scale-to-width-down/120?cb=20200913200749"
+  },
+  "Hog Glider": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/99/Avatar_Hog_Glider.png/revision/latest/scale-to-width-down/120?cb=20200913075411"
+  },
+  "Electrofire Wizard": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/6f/Avatar_Electrofire_Wizard.png/revision/latest/scale-to-width-down/120?cb=20230515203151"
+  },
+  "Super Barbarian": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/8/81/Avatar_Super_Barbarian.png/revision/latest/scale-to-width-down/137?cb=20200913075458"
+  },
+  "Super Archer": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/3a/Avatar_Super_Archer.png/revision/latest/scale-to-width-down/137?cb=20200913075643"
+  },
+  "Super Giant": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/6b/Avatar_Super_Giant.png/revision/latest/scale-to-width-down/137?cb=20200913075731"
+  },
+  "Sneaky Goblin": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/6/6e/Avatar_Sneaky_Goblin.png/revision/latest/scale-to-width-down/137?cb=20200913075807"
+  },
+  "Super Wall Breaker": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/c/ca/Avatar_Super_Wall_Breaker.png/revision/latest/scale-to-width-down/137?cb=20210101081415"
+  },
+  "Rocket Balloon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/e/ed/Avatar_Rocket_Balloon.png/revision/latest/scale-to-width-down/137?cb=20210618061142"
+  },
+  "Super Wizard": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/f/f9/Avatar_Super_Wizard.png/revision/latest/scale-to-width-down/137?cb=20201207184826"
+  },
+  "Super Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/0/0f/Avatar_Super_Dragon.png/revision/latest/scale-to-width-down/137?cb=20211209194802"
+  },
+  "Inferno Dragon": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/0/0b/Avatar_Inferno_Dragon.png/revision/latest/scale-to-width-down/137?cb=20200913075841"
+  },
+  "Super Miner": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/b/b3/Avatar_Super_Miner.png/revision/latest/scale-to-width-down/137?cb=20221212211242"
+  },
+  "Super Yeti": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/5/5f/Avatar_Super_Yeti.png/revision/latest/scale-to-width-down/137?cb=20250326100831"
+  },
+  "Super Minion": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/b/be/Avatar_Super_Minion.png/revision/latest/scale-to-width-down/137?cb=20201013063740"
+  },
+  "Super Hog Rider": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/c/c4/Avatar_Super_Hog_Rider.png/revision/latest/scale-to-width-down/137?cb=20230613002801"
+  },
+  "Super Valkyrie": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/9/9e/Avatar_Super_Valkyrie.png/revision/latest/scale-to-width-down/137?cb=20201012035954"
+  },
+  "Super Witch": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/1/18/Avatar_Super_Witch.png/revision/latest/scale-to-width-down/137?cb=20200913075918"
+  },
+  "Ice Hound": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/b/b0/Avatar_Ice_Hound.png/revision/latest/scale-to-width-down/137?cb=20201207184828"
+  },
+  "Super Bowler": {
+    "image": "https://static.wikia.nocookie.net/clashofclans/images/3/39/Avatar_Super_Bowler.png/revision/latest/scale-to-width-down/137?cb=20211005090727"
+  }
+}
