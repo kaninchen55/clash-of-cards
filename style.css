@@ -1,0 +1,1129 @@
+@font-face {
+    font-family: Clash;
+    src: url("font/Clash_Regular.otf.ttf");
+}
+
+@font-face {
+    font-family: Clash;
+    src: url("font/Clash_Bold.otf.ttf");
+    font-weight: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4e2f18;
+    font-family: Clash, Arial, sans-serif;
+    padding: 20px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    background: #2d1b0e;
+    border-right: 6px solid #d38d24;
+    color: #fff;
+    padding: 85px 15px 15px;
+    overflow-y: auto;
+    transition: .25s;
+    z-index: 100;
+}
+
+#sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+#toggleSidebar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(#f4c44f, #d98d18);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.35), 0 5px 0 #7b4b10, 0 10px 18px rgba(0,0,0,.4);
+}
+
+#toggleSidebar:hover {
+    filter: brightness(1.08);
+}
+
+#toggleSidebar:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.25), 0 1px 0 #7b4a10;
+}
+
+#loginBox {
+    margin-top: 20px;
+}
+
+#loginBox input {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#loginBox button {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background: linear-gradient(#c6861e,#9b6012);
+    font-family: Clash, Arial, sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d89d2b;
+    padding: 8px 10px;
+    margin: 6px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid rgba(0,0,0,.14);
+    box-shadow: 0 6px 10px rgba(0,0,0,.12), inset 0 2px 0 rgba(255,255,255,.06);
+}
+
+.member.active {
+    background: #45b62c;
+}
+
+.member-star {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #3a220e;
+    border-radius: 10px;
+    background: linear-gradient(#f4c44f,#d98d18);
+    color: #fff;
+    font-family: Clash,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.45), inset 0 -3px 0 rgba(0,0,0,.25), 0 3px 0 #3a220e;
+}
+
+.member-star:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.25), 0 1px 0 #3a220e;
+}
+
+/* Prioritised star appearance */
+.member-star.priority {
+    background: linear-gradient(#ffef9a, #ffd24a);
+    border-color: #b97706;
+    color: #8a4b00;
+}
+
+.member-star.priority:active {
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.25), 0 1px 0 #7a4a06;
+}
+
+/* Use the main page font/text styling for sidebar text (no heavy stroke) */
+#sidebar .member-name,
+#sidebar .account span,
+#sidebar h2,
+#sidebar h3 {
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+/* Priority toggle animation */
+.priority-anim {
+    will-change: transform, box-shadow;
+    animation: priority-pop 520ms cubic-bezier(.2,.9,.2,1);
+}
+
+@keyframes priority-pop {
+    0% { transform: scale(.94); }
+    40% { transform: scale(1.12); }
+    70% { transform: scale(.98); }
+    100% { transform: scale(1); }
+}
+
+/* Headings and small labels in the sidebar get a subtle border and shadow */
+#sidebar h2,
+#sidebar h3 {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 6px 12px rgba(0,0,0,.08), inset 0 2px 0 rgba(255,255,255,.04);
+    background: rgba(255,255,255,0.02);
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #444;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    user-select: none;
+    cursor: grab;
+    border: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 6px 12px rgba(0,0,0,.10), inset 0 2px 0 rgba(255,255,255,.03);
+}
+
+.account:active {
+    cursor: grabbing;
+}
+
+.account.dragging {
+    opacity: .45;
+    transform: scale(.98);
+}
+
+.account span {
+    flex: 1;
+    cursor: pointer;
+}
+
+.account .removeAccount {
+    flex: 0 0 28px;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+    margin: 0;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #3a220e !important;
+    border-radius: 10px !important;
+    background: linear-gradient(#ff6b6b,#c92828) !important;
+    color: #fff !important;
+    font-family: Clash,Arial,sans-serif;
+    font-size: 20px !important;
+    font-weight: 900;
+    line-height: 1 !important;
+    cursor: pointer;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.25),0 3px 0 #3a220e !important;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+}
+
+.account .removeAccount:hover {
+    background: linear-gradient(#ff7777,#e33b3b) !important;
+}
+
+.account .removeAccount:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.25),0 1px 0 #3a220e !important;
+}
+
+#players {
+    margin-left: 340px;
+    width: calc(100% - 340px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transition: .25s;
+}
+
+body.sidebar-hidden #players {
+    margin-left: 0;
+    width: 100%;
+}
+
+.event-window,
+.trade-window {
+    width: 100%;
+    min-width: 0;
+    background: #efe0b5;
+    border: 8px solid #d38d24;
+    border-radius: 24px;
+    box-shadow: 0 10px 0 #8d5514,0 18px 40px rgba(0,0,0,.45),inset 0 4px 0 rgba(255,255,255,.6);
+    overflow: hidden;
+}
+
+.event-window {
+    height: 100vh;
+}
+
+.event-header {
+    height: 72px;
+    background: linear-gradient(#5d646d,#373c42);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    color: #fff;
+    text-shadow: 0 3px 0 rgba(0,0,0,.5);
+}
+
+.event-title {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: -3px -3px 0 #000,3px -3px 0 #000,-3px 3px 0 #000,3px 3px 0 #000,0 4px 6px rgba(0,0,0,.8);
+}
+
+.player-name {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    background: #d89d2b;
+    padding: 8px 18px;
+    border-radius: 16px;
+    border: 3px solid rgba(255,255,255,.35);
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 3px 5px rgba(0,0,0,.8);
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.35),0 4px 0 rgba(0,0,0,.35);
+}
+
+.event-body {
+    padding: 18px;
+    height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+}
+
+.category-counters {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.category-counter {
+    height: 72px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8px 20px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 3px 5px rgba(0,0,0,.7);
+    box-shadow: inset 0 4px 0 rgba(255,255,255,.25),0 5px 0 rgba(0,0,0,.3);
+}
+
+.counter-title,
+.counter-value {
+    font-size: 16px;
+}
+
+.counter-value {
+    margin-top: 6px;
+}
+
+.check {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    font-size: 28px;
+    font-weight: 900;
+    color: rgb(24,255,3);
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+}
+
+.tab-elixir {
+    background: linear-gradient(#cb79ff,#8d2ce8);
+}
+
+.tab-dark {
+    background: linear-gradient(#7a3d9d,#43205c);
+}
+
+.tab-builder {
+    background: linear-gradient(#44a4ff,#1b67d9);
+}
+
+.tab-super {
+    background: linear-gradient(#ffb247,#ec7623);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    gap: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    min-width: 0;
+    padding-right: 8px;
+}
+
+.card {
+    min-width: 0;
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 6px solid;
+    box-shadow: inset 0 4px 0 rgba(255,255,255,.5),0 6px 0 rgba(0,0,0,.35);
+}
+
+.card.tab-elixir {
+    background: linear-gradient(#dca0ff,#b15cff);
+    border-color: #8d2ce8;
+}
+
+.card.tab-dark {
+    background: linear-gradient(#8c65aa,#56316d);
+    border-color: #3d2055;
+}
+
+.card.tab-builder {
+    background: linear-gradient(#7bc4ff,#3984e8);
+    border-color: #1760c5;
+}
+
+.card.tab-super {
+    background: linear-gradient(#ffd07a,#ff8b24);
+    border-color: #e06b12;
+}
+
+.card.empty .card-frame img {
+    filter: grayscale(1);
+    opacity: .55;
+}
+
+.card.empty .count {
+    filter: none;
+    opacity: 1;
+}
+
+.card-frame {
+    width: min(85px, 12vw);
+    height: min(85px, 12vw);
+    flex: 0 0 min(85px, 12vw);
+    padding: 4px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.25);
+    border: 3px solid rgba(255,255,255,.4);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+.card-frame:active {
+    transform: translateY(3px) scale(.96);
+}
+
+.card-name {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 3px 5px rgba(0,0,0,.7);
+}
+
+.counter {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.counter button {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: Clash,Arial,sans-serif;
+    color: #fff;
+    border: 3px solid #3a220e;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+    box-shadow: inset 0 4px 0 rgba(255,255,255,.45),inset 0 -5px 0 rgba(0,0,0,.25),0 5px 0 #3a220e,0 8px 10px rgba(0,0,0,.35);
+    transition: .1s;
+}
+
+.counter button:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.25),0 1px 0 #3a220e;
+}
+
+.minus {
+    background: linear-gradient(#ff6b6b,#c92828);
+}
+
+.plus {
+    background: linear-gradient(#79ed45,#269b21);
+}
+
+.count {
+    min-width: 42px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 0;
+    line-height: 1;
+    background: linear-gradient(#fff2b8,#d8a94a);
+    border: 3px solid #6b3d12;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: Clash,Arial,sans-serif;
+    color: #fff;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.7),0 4px 0 #6b3d12;
+}
+
+.count.more-than-one {
+    background: linear-gradient(#8eeaff,#2699d8);
+    border-color: #12618d;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.7),0 4px 0 #12618d;
+}
+
+.header-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.delete-account {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 3px solid #3a220e;
+    border-radius: 14px;
+    background: linear-gradient(#e04b4b,#a21b1b);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: inset 0 4px 0 rgba(255,255,255,.35),inset 0 -4px 0 rgba(0,0,0,.22),0 5px 0 #3a220e,0 8px 10px rgba(0,0,0,.28);
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+}
+
+.delete-account:hover {
+    background: linear-gradient(#e05555,#b32727);
+}
+
+.delete-account:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 3px 0 rgba(0,0,0,.25),0 1px 0 #3a220e;
+}
+
+#tradingButton {
+    margin-top: 10px;
+    background: linear-gradient(#4aa6e6,#1c4f89) !important;
+    color: #fff;
+    font-family: Clash,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 200;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    min-width: 140px !important;
+    height: 40px !important;
+    padding: 6px 14px !important;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,.12);
+    box-shadow: 0 5px 10px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.06);
+    line-height: 1;
+}
+
+.trade-window {
+    height: 100vh;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-header {
+    height: 78px;
+    flex: 0 0 78px;
+    background: linear-gradient(#5d646d,#373c42);
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    color: #fff;
+}
+
+.trade-title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+    padding: 0 40px;
+    text-shadow: -3px -3px 0 #000,3px -3px 0 #000,-3px 3px 0 #000,3px 3px 0 #000;
+}
+
+.trade-subtitle {
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 5px;
+    line-height: 1;
+    padding: 0 40px;
+    opacity: .9;
+}
+
+.trade-info {
+    margin: 10px 16px 5px;
+    padding: 9px 14px;
+    background: #d5bc7d;
+    border: 3px solid #92703b;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #3a220e;
+}
+
+.trade-controls {
+    display: flex;
+    justify-content: center;
+    padding: 7px 16px;
+}
+
+.optimize-button {
+    height: 46px;
+    min-width: 190px;
+    padding: 0 20px;
+    border: 3px solid #3a220e;
+    border-radius: 13px;
+    background:linear-gradient(#59b835,#1d6b13);
+    color: #fff;
+    font-family: Clash,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.4),0 4px 0 #3a220e;
+    cursor: pointer;
+}
+
+.optimize-button:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.25),0 1px 0 #3a220e;
+}
+
+.optimize-button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.trade-results {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 14px 18px;
+}
+
+.trade-row {
+    width: 100%;
+    min-height: 70px;
+    margin: 6px 0;
+    padding: 5px 8px;
+    display: grid;
+    grid-template-columns: 105px minmax(130px,1fr) 35px minmax(130px,1fr) minmax(92px, 180px);
+    align-items: center;
+    gap: 6px;
+    background: #d9c28a;
+    border: 3px solid #8c682d;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.4),0 3px 0 rgba(0,0,0,.2);
+    overflow: visible;
+}
+
+.trade-row.trade-requested {
+    background: #c8d99a;
+    border-color: #267d2b;
+}
+
+.trade-type {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.3);
+}
+
+.trade-side {
+    min-width: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 2px 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+    overflow: visible;
+}
+
+.trade-side span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    line-height: 1.1;
+}
+
+.trade-side img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    flex: 0 0 min(44px,6vw);
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .cards {
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        gap: 6px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 6px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 6px;
+    }
+    .card-frame {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px;
+        border-radius: 14px;
+    }
+    .card-frame img {
+        border-radius: 12px;
+    }
+    .trade-side img {
+        flex: 0 0 28px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 6px;
+    }
+    .card-frame {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+    }
+}
+
+.trade-side span:last-child {
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.trade-side span:first-child {
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.priority-name {
+    color: #ffe45c !important;
+}
+
+.trade-symbol {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    font-family: Arial,sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1;
+    color: #5a3513;
+}
+
+.trade-actions {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    overflow: visible;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.request-trade,
+.confirm-trade,
+.cancel-trade {
+    box-sizing: border-box;
+    min-width: 64px !important;
+    max-width: 100% !important;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 6px 8px !important;
+    border-radius: 10px !important;
+    font-family: Clash,Arial,sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    cursor: pointer;
+}
+
+.request-trade {
+    border: 2px solid #14629b !important;
+    background: linear-gradient(#3aa8ee,#1b5aa8) !important;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.36),0 3px 0 #14629b !important;
+}
+
+.cancel-trade {
+    border:2px solid #7a1d1d !important;
+    background:linear-gradient(#e04b4b,#a21b1b) !important;
+    box-shadow:inset 0 3px 0 rgba(255,255,255,.36),0 3px 0 #7a1d1d !important;
+}
+
+.request-trade:hover:not(:disabled),
+.confirm-trade:hover:not(:disabled),
+.cancel-trade:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.request-trade:active:not(:disabled),
+.confirm-trade:active:not(:disabled),
+.cancel-trade:active:not(:disabled) {
+    transform: translateY(2px);
+}
+
+.request-trade:disabled,
+.confirm-trade:disabled,
+.cancel-trade:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.confirm-trade {
+    border:2px solid #1b5a12!important;
+    background:linear-gradient(#4fb335,#1e6f17)!important;
+    box-shadow:inset 0 3px 0 rgba(255,255,255,.36),0 3px 0 #1b5a12!important;
+}
+
+.trade-status {
+    width: 84px;
+    min-width: 84px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(#777,#444);
+    border: 2px solid #333;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    box-shadow: inset 0 3px 0 rgba(255,255,255,.25),0 3px 0 #333;
+}
+
+.trade-empty {
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: #6b4a20;
+}
+
+.trade-confirmed {
+    opacity: 0;
+    transform: translateX(60px) scale(.95);
+    transition: .7s;
+}
+
+@media(max-width:1100px) {
+    .trade-row {
+        grid-template-columns: 90px minmax(110px,1fr) 30px minmax(110px,1fr) minmax(86px,160px);
+        gap: 4px;
+    }
+
+    .trade-side {
+        font-size: 13px;
+        gap: 5px;
+    }
+
+    .trade-side img {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+
+    .request-trade,
+    .confirm-trade,
+    .cancel-trade,
+    .trade-status {
+        width: 76px !important;
+        min-width: 76px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media(max-width:800px) {
+    #players {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .trade-window {
+        height: calc(100vh - 20px);
+    }
+
+    .trade-header {
+        height: 65px;
+        flex-basis: 65px;
+        padding: 0 15px;
+    }
+
+    .trade-title {
+        font-size: 25px;
+    }
+
+    .trade-subtitle {
+        font-size: 12px;
+    }
+
+    .trade-info {
+        font-size: 13px;
+        margin: 7px 10px 3px;
+        padding: 7px 10px;
+    }
+
+    .trade-controls {
+        padding: 5px 10px;
+    }
+
+    .optimize-button {
+        height: 42px;
+        min-width: 170px;
+        font-size: 16px;
+    }
+
+    .trade-results {
+        padding: 3px 8px 15px;
+    }
+
+    .trade-row {
+        grid-template-columns: 75px minmax(90px,1fr) 25px minmax(90px,1fr) minmax(70px,160px);
+        min-height: 62px;
+        padding: 4px;
+        gap: 3px;
+        border-width: 2px;
+    }
+
+    .trade-type {
+        height: 36px;
+        font-size: 9px;
+    }
+
+    .trade-side {
+        height: 50px;
+        font-size: 11px;
+        gap: 3px;
+    }
+
+    .trade-side img {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+    }
+
+    .trade-side span:last-child {
+        max-width: 60px;
+    }
+
+    .trade-symbol {
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+
+    .request-trade,
+    .confirm-trade,
+    .cancel-trade,
+    .trade-status {
+        width: 65px !important;
+        min-width: 65px !important;
+        height: 34px !important;
+        min-height: 34px !important;
+        font-size: 10px !important;
+    }
+}
+
+@media(max-width:550px) {
+    .trade-row {
+        grid-template-columns: 65px minmax(75px,1fr) 22px minmax(75px,1fr) minmax(66px,160px);
+    }
+
+    .trade-side {
+        font-size: 10px;
+    }
+
+    .trade-side img {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+    }
+
+    .trade-side span:last-child {
+        max-width: 48px;
+    }
+
+    .trade-type {
+        font-size: 8px;
+    }
+
+    .request-trade,
+    .confirm-trade,
+    .cancel-trade,
+    .trade-status {
+        width: 58px !important;
+        min-width: 58px !important;
+        font-size: 9px !important;
+    }
+}
+
+@media(max-width:430px) {
+    .trade-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 7px;
+    }
+
+    .trade-type {
+        width: 100%;
+        height: 30px;
+    }
+
+    .trade-side {
+        height: 48px;
+        font-size: 13px;
+    }
+
+    .trade-side img {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .trade-side span:last-child {
+        max-width: 100px;
+    }
+
+    .trade-symbol {
+        width: 100%;
+        height: 20px;
+        transform: rotate(90deg);
+    }
+
+    .trade-actions {
+        height: 38px;
+    }
+
+    .request-trade,
+    .confirm-trade,
+    .cancel-trade,
+    .trade-status {
+        width: 100px !important;
+        min-width: 100px !important;
+        height: 34px !important;
+    }
+}
